@@ -78,15 +78,16 @@ def clean_data(df):
     return df_cleaned
 
 if __name__ == "__main__":
-	dataset_list =['bangalore_cars','chennai_cars',
-				   'delhi_cars','hyderabad_cars',
-				   'jaipur_cars','kolkata_cars'
-				   ]
-	master_data = pd.DataFrame()
+    dataset_list =['bangalore','chennai',
+                   'delhi','hyderabad',
+                   'jaipur','kolkata'
+                   ]
+    master_data = pd.DataFrame()
 
-	for i in dataset_list:
-	    data = pd.read_excel(f'Dataset/master/{i}.xlsx')
-	    df_cleaned = clean_data(data)
-	    master_data = pd.concat([master_data, df_cleaned])
+    for city in dataset_list:
+        data = pd.read_excel(f'Dataset/master/{city}_cars.xlsx')
+        df_cleaned = clean_data(data)
+        df_cleaned['city'] = city
+        master_data = pd.concat([master_data, df_cleaned])
 
-	master_data.to_excel('Dataset/process/extracted_data.xlsx', index=False)
+    master_data.to_excel('Dataset/process/extracted_data.xlsx', index=False)
