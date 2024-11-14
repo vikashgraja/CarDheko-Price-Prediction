@@ -128,22 +128,5 @@ if __name__ == "__main__":
 
     combined_df = combined_city(city_data)
 
-    combined_df.drop(
-        columns=["owner", "centralVariantId", "priceActual", "priceSaving", "priceFixedText", "trendingText.imgUrl",
-                 "trendingText.heading", "trendingText.desc", "Registration Year", "RTO", "Ownership",
-                 "Engine Displacement", "Seats", "Wheel Size", "Engine Type", "Displacement", "Max Power_1",
-                 "Max Torque", "No of Cylinder", "Values per Cylinder", "Values per Cylinder", "Fuel Suppy System",
-                 "BoreX Stroke", "Compression Ratio", "Turbo Charger", "Super Charger", "Seating Capacity",
-                 "Tyre Type", "Alloy Wheel Size", "Height", "Width", "Wheel Base", "Alloy Wheel Size_1",
-                 "Front Tread", "Rear Tread", "Kerb Weight", "Gross Weight", "Ground Clearance Unladen",
-                 "Seating Capacity_1", "Seating Capacity_1", "Tyre Type_1", "No Door Numbers_1",
-                 "Seating Capacity_2", "Steering Type_2", "Turning Radius", "Front Brake Type", "Rear Brake Type",
-                 "Top Speed", "Acceleration", "Tyre Type_2", "No Door Numbers_2", "Alloy Wheel Size_2",
-                 "Acceleration_1", "Top Speed_1",
-                 "Rear Brake Type_1", "Front Brake Type_1", "Gear Box_1", "Turning Radius_1", "variantName",
-                 "Value Configuration", "Steering Type",
-                 "No Door Numbers", "Length", "Cargo Volumn", "Drive Type_1", "Torque", "Steering Type_1",
-                 "Year of Manufacture", "Max Power", "Transmission",
-                 "Fuel Type", "km"], inplace=True, axis=1)
-
     combined_df.to_excel('Dataset/process/extracted_data.xlsx', index=False)
+
