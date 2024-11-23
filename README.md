@@ -22,8 +22,16 @@ Follow these steps to set up and run CarDheko-Price-Prediction locally.
    ``` 
 ###  Download the Dataset
 The dataset contains multiple Excel files, each representing a different city, and includes detailed information on used cars.
-###  Running the Project
+
+###  Run the data extraction and cleaning code
+- Run the extract_data.py to extract the data from the unstructured dataset. 
+- Run Data Cleaning.ipynb file to clean the data.
+
+###  Train the model
+- Run all the cells in EDA & Model.ipynb file.
+
+###  Running the App
  **Run the Streamlit app:**  
    ```bash
-   streamlit run app.py
+   streamlit run CarDhekoApp.py
    ``` 
